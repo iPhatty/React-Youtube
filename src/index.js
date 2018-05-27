@@ -5,6 +5,7 @@ const env = require('env2')('env')
 const API_KEY = process.env.API_KEY;
 // Import components
 import SearchBar from './components/search_bar'
+import VideoList from './components/video_list'
 
 class App extends Component {
 constructor(props){
@@ -21,6 +22,7 @@ render(){
     return (
         <div>
             <SearchBar />
+            <VideoList videos={this.state.videos} />
         </div>
         );
 }    
