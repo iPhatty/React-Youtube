@@ -6,15 +6,15 @@ const API_KEY = process.env.API_KEY;
 // Import components
 import SearchBar from './components/search_bar'
 
-YTSearch({key: API_KEY, term: 'bts fake love'}, function(data){
-    console.log(data);
-});
-
 class App extends Component {
 constructor(props){
     super(props);
 
-    this.state = { };
+    this.state = { videos: [] };
+
+    YTSearch({key: API_KEY, term: 'bts'}, videos => {
+        this.setState({ videos });
+    });
 }
 
 render(){
