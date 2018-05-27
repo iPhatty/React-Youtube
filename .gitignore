@@ -63,3 +63,4 @@ typings/
 __mocks__
 dist
 .cache
+.vscode
