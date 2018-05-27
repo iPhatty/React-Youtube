@@ -59,3 +59,7 @@ typings/
 
 # next.js build output
 .next
+
+__mocks__
+dist
+.cache
