@@ -10,5 +10,5 @@ on your terminal. To run locally, please run
 ```
 npm start
 ```
-you can video locally on localhost:1234
+you can view locally on localhost:1234
 Enjoy!
