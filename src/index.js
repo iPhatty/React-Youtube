@@ -1,8 +1,9 @@
+import _ from 'lodash';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search';
-const env = require('env2')('env')
-const API_KEY = process.env.API_KEY;
+const env = require('env2')('env') //eslint-disable-line
+const API_KEY = process.env.API_KEY; //eslint-disable-line
 // Import components
 import SearchBar from './components/search_bar'
 import VideoList from './components/video_list'
@@ -30,9 +31,10 @@ videoSearch (searchTerm) {
 }
 
 render(){
+    const videoSearch = _.debounce((searchTerm) => {this.videoSearch(searchTerm)} , 300); //throttle search using lodash
     return (
         <div>
-            <SearchBar onSearchChange={ searchTerm => this.videoSearch(searchTerm) } />
+            <SearchBar onSearchChange={ videoSearch } />
             <VideoDetail video={this.state.selectedVideo} />
             <VideoList 
             onVideoSelect={selectedVideo => this.setState({ selectedVideo })}
