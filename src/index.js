@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search';
-const env = require('env2')('env')
-const API_KEY = process.env.API_KEY;
+const env = require('env2')('env') //eslint-disable-line
+const API_KEY = process.env.API_KEY; //eslint-disable-line
 // Import components
 import SearchBar from './components/search_bar'
 import VideoList from './components/video_list'
