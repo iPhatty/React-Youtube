@@ -31,7 +31,7 @@ videoSearch (searchTerm) {
 }
 
 render(){
-    const videoSearch = _.debounce((searchTerm) => {this.videoSearch(searchTerm)} , 300);
+    const videoSearch = _.debounce((searchTerm) => {this.videoSearch(searchTerm)} , 300); //throttle search using lodash
     return (
         <div>
             <SearchBar onSearchChange={ videoSearch } />
